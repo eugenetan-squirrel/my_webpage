@@ -1,7 +1,3 @@
-#red-warning {
-    color: red;
-}
-
 .flashcard-container {
     display: flex;
     flex-direction: column;
