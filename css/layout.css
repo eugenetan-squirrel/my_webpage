@@ -1,0 +1,7 @@
+header, h1 {
+    font-size: 40px;
+    padding: 20px;
+    background-color: skyblue;
+    font: normal 40px/1 "BBH Bartle", sans-serif;
+    text-align: center;
+}
