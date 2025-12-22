@@ -1,53 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Eugene Tan">
-    <meta name="description" content="This is the hompage for my first webpage!">
-    <meta name="keywords" content="HTML, CSS, JavaScript">
-    <title>Home</title>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-        @import url('https://fonts.googleapis.com/css2?family=BBH+Bartle&display=swap');
-    </style>
-    <link rel="stylesheet" href="css/base.css">
-    <link rel="stylesheet" href="css/layout.css">
-    <link rel="stylesheet" href="../css/pages/index.css">
-    
-</head>
-<body>
-    <header>
-        Home
-    </header>
-    <p>This is the homepage. Navigate to the <a href="pages/trivia.html">trivia</a> section to test your knowledge!</p>
-    
-    <p>Enjoy your stay!</p>
+    <head>
+        <title>Home</title>
 
-    <p>Here are some recommended <i>webpages</i> you should visit:</p>
+        <link rel="stylesheet" href="css/base.css">
+        <link rel="stylesheet" href="css/pages/index.css">
 
-    <div class="flashcard-row">
-        <div class="short-table">
-            <a href="https://www.chess.com">Chess.com</a>
-            <p>A cool website made by Erik Allebest for you to play and learn chess! </p>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+            @import url('https://fonts.googleapis.com/css2?family=BBH+Bartle&display=swap');
+        </style>
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Eugene Tan">
+        <meta name="description" content="This is the hompage for my first webpage!">
+        <meta name="keywords" content="HTML, CSS, JavaScript">
+    </head>
+    <body>
+        <header>
+            Home
+        </header>
+        <p>This is the homepage. Navigate to the <a href="pages/trivia.html">trivia</a> section to test your knowledge!</p>
+
+        <p>Enjoy your stay!</p>
+
+        <p>Here are some recommended <i>webpages</i> you should visit:</p>
+
+        <div class="flashcard-container">
+            <div class="single-flashcard" style=background-color:limegreen>
+                <img class="flashcard-icon" src="../../assets/images/chess-icon.jpg" alt="Chess.com Logo">
+                <div class="flashcard-text">
+                    <b>Chess.com</b>
+                    <p>Play chess online with people around the world!</p>
+                    <a href="https://chess.com">Play now! </a>
+                </div>
+            </div>
+            
+            <div class="single-flashcard" style=background-color:deepskyblue>
+                <img class="flashcard-icon" src="../../assets/images/youtube-icon.jpg" alt="Youtube Logo">
+                <div class="flashcard-text">
+                    <b>Youtube</b>
+                    <p>Browse, create and watch videos for free!</p>
+                    <a href="https://youtu.be/dQw4w9WgXcQ">View most viral video with 1.7 billion views!</a>
+                </div>
+            </div>
         </div>
+        <div class="horizontal-layout" style=--gap:20px;>
+            <div class="square-box" style=--box-width:250px;>
+                <p>Ad</p>
+                <hr>
+                <p>Congratulations! You just won a Samsung A16 Pro!</p>
+                <p>Click <a href="https://youtu.be/dQw4w9WgXcQ">here</a> to claim your prize!</p>
+                <p>Totally not a scam!</p>
+            </div>
 
-        <div class="short-table">
-            <a href="https://www.chatgpt.com">Chatgpt</a>
-            <p>Ask any of your daily questions and expect an interesting and funny answer! </p>
+            <div class="square-box" style=--box-width:250px;>
+                <p>Ad</p>
+                <hr>
+                <p>Apple watch promotion!</p>
+                <p>Buy one get five free!</p>
+                <p>Click <a href="https://youtu.be/dQw4w9WgXcQ">here</a> to claim your prize!</p>
+                <p>Totally not a scam!</p>
+            </div>
         </div>
-
-        <div class="short-table">
-            <a href="https://www.wikipedia.org">Wikipedia</a>
-            <p>Search, edit and view this online encyclopedia for free!</p>
+        <div class="flashcard-container">
+            <div class="single-flashcard" style=background-color:yellow>
+                <img class="flashcard-icon" src="../../assets/images/chatgpt-icon.jpg" alt="ChatGPT Logo">
+                <div class="flashcard-text">
+                    <b>ChatGPT</b>
+                    <p>Ask any of your daily questions and expect an interesting and funny answer! </p>
+                    <a href="https://chat.openai.com">Try it out!</a>
+                </div>
+            </div>
         </div>
-
-        <div class="short-table">
-            <a href="https://youtu.be/dQw4w9WgXcQ">Don't Click</a>
-            <p id="red-warning">Only for the admin. Click at your own risk.</p>
-        </div>
-    </div>
-
-</body>
+    </body>
 
 </html>

@@ -1,3 +1,38 @@
 #red-warning {
     color: red;
 }
+
+.flashcard-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 0 10px;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.single-flashcard {
+    display: flex;
+    align-items: flex-start;
+    background-color: white;
+    padding: 15px;
+    gap: 10px;
+    box-sizing: border-box;
+}
+
+.flashcard-icon {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.flashcard-text {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.flashcard-text p{
+    margin: 0;
+}

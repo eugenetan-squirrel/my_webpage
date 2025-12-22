@@ -1,10 +1,18 @@
+header, h1 {
+    font-size: 40px;
+    padding: 20px;
+    background-color: skyblue;
+    font: normal 40px/1 "BBH Bartle", sans-serif;
+    text-align: center;
+}
+
 html {
     font-family: "Montserrat", sans-serif;
 }
 
 a {
     text-decoration: none;
-    color: tomato;
+    color: red;
 }
 
 a:hover {
@@ -13,6 +21,24 @@ a:hover {
 }
 
 a:visited {
-    color: lime;
+    color: red;
     text-decoration: none;
+}
+
+.square-box {
+    --box-width: 300px;
+    text-align: center;
+    width: var(--box-width);
+    height: var(--box-width);
+    padding: 0px 10px 0px 10px;
+    margin: 20px;
+    border: 2px solid black;
+    box-sizing: border-box;
+    background-color: white;
+}
+
+.horizontal-layout {
+    --gap: 20px;
+    gap: var(--gap);
+    display: flex;
 }
