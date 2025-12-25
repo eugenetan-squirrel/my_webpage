@@ -5,6 +5,7 @@
 
         <link rel="stylesheet" href="css/base.css">
         <link rel="stylesheet" href="css/pages/index.css">
+        <script type="module" src="../js/pages/index.js" defer></script>
 
         <style>
             @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
@@ -24,6 +25,10 @@
         <p>This is the homepage. Navigate to the <a href="pages/trivia.html">trivia</a> section to test your knowledge!</p>
 
         <p>Enjoy your stay!</p>
+        
+        <h2>Votes: <span id="count">0</span></h2>
+        <button id="upvote" onclick="vote('up')">Upvote! </button>
+        <button id="downvote" onclick="downvote('down')">Downvote! </button>
 
         <p>Here are some recommended <i>webpages</i> you should visit:</p>
 
