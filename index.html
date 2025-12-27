@@ -25,11 +25,12 @@
         <p>This is the homepage. Navigate to the <a href="pages/trivia.html">trivia</a> section to test your knowledge!</p>
 
         <p>Enjoy your stay!</p>
+        <div style="--btn-width:200px">
+            <h2>Votes: <span id="count">0</span></h2>
+            <button id="up" onclick="vote('up', this)">Upvote! </button>
+            <button id="down" onclick="vote('down', this)">Downvote! </button>
+        </div>
         
-        <h2>Votes: <span id="count">0</span></h2>
-        <button id="upvote" onclick="vote('up')">Upvote! </button>
-        <button id="downvote" onclick="downvote('down')">Downvote! </button>
-
         <p>Here are some recommended <i>webpages</i> you should visit:</p>
 
         <div class="flashcard-container">

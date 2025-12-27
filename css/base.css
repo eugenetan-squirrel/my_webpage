@@ -42,3 +42,11 @@ a:visited {
     gap: var(--gap);
     display: flex;
 }
+
+button {
+    font-size: 16px;
+    margin: 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+    width: var(--btn-width, 200px);
+}

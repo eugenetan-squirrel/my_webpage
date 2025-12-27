@@ -23,39 +23,25 @@ async function loadCount() {
 
 let state = null;
 
-async function vote(type) {
+async function vote(type, button) {
   const upBtn = document.getElementById("upvote");
   const downBtn = document.getElementById("downvote");
 
-  if (state === type) {
-    voteState = null;
+  if (state === null) {
+    await updateDoc(ref, { count: increment(type === 'up' ? 1 : -1)})
+    document.querySelector("#"+type).innerText = (type === 'up' ? "Upvoted" : "Downvoted");
+    state = type;
+  } else if (state === type) {
     await updateDoc(ref, { count: increment(type === 'up' ? -1 : 1) });
+    document.querySelector("#"+state).innerText = (type === 'up' ? "Upvote!" : "Downvote!");
+    state = null;
   } else {
-    if (state === "up") {
-      await updateDoc(ref, { count: increment(2)})
-    } else {
-      await updateDoc(ref, { count: increment(-2)})
-    }
+    await updateDoc(ref, { count: increment(type === 'up' ? 2 : -2) });
+    document.querySelector("#"+state).innerText = (state === 'up' ? "Upvote!" : "Downvote!");
+    document.querySelector("#"+type).innerText = (type === 'up' ? "Upvoted" : "Downvoted");
+    state = type;
   }
 }
 
-
-
-async function upvote(button) {
-  await updateDoc(ref, {count: increment(1)});
-  loadCount();
-  button.disabled=true;
-  document.getElementById(downvote).disabled=false;
-}
-
-async function downvote(button) {
-  await updateDoc(ref, {count: increment(-1)});
-  loadCount();
-  button.disabled = true;
-  document.getElementById(upvote).disabled=false;
-}
-
-window.upvote = upvote;
-window.downvote = downvote;
-
+window.vote = vote;
 loadCount();
