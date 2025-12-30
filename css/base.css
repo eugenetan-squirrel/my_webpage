@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=BBH+Bartle&display=swap');
+
 header, h1 {
     font-size: 40px;
     padding: 20px;
@@ -23,18 +26,6 @@ a:hover {
 a:visited {
     color: red;
     text-decoration: none;
-}
-
-.square-box {
-    --box-width: 300px;
-    text-align: center;
-    width: var(--box-width);
-    height: var(--box-width);
-    padding: 0px 10px 0px 10px;
-    margin: 20px;
-    border: 2px solid black;
-    box-sizing: border-box;
-    background-color: white;
 }
 
 .horizontal-layout {

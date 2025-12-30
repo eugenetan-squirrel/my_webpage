@@ -32,3 +32,15 @@
 .flashcard-text p{
     margin: 0;
 }
+
+.square-box {
+    --box-width: 300px;
+    text-align: center;
+    width: var(--box-width);
+    height: var(--box-width);
+    padding: 0px 10px 0px 10px;
+    margin: 20px;
+    border: 2px solid black;
+    box-sizing: border-box;
+    background-color: white;
+}
