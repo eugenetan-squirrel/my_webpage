@@ -14,18 +14,18 @@ html {
 }
 
 a {
-    text-decoration: none;
     color: red;
-}
-
-a:hover {
-    text-decoration: underline;
-    color: lime;
+    text-decoration: none;
 }
 
 a:visited {
     color: red;
     text-decoration: none;
+}
+
+a:hover {
+    color: lime;
+    text-decoration: underline;
 }
 
 .horizontal-layout {
