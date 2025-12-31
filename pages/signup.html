@@ -1,21 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Log In</title>
+        <title>Sign Up</title>
 
         <link rel="stylesheet" href="../css/base.css">
         <link rel="stylesheet" href="../css/pages/trivia.css">
-        <script src="../js/login.js" type="module" defer></script>
+        <script src="../js/login.js" defer type="module"></script>
         
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="author" content="Eugene Tan">
-        <meta name="description" content="Login Page">
-        <meta name="keywords" content="Login, username, password">
+        <meta name="description" content="Signup Page">
+        <meta name="keywords" content="Signup, username, password">
     </head>
     <body>
-        <header>Log In</header>
-        <p>Please enter your login information below, or <a href="signup.html">sign up</a>.</p>
+        <header>Sign Up</header>
+        <p>Sign up by entering all the fields or <a href="login.html">log in</a> if you already have an account.</p>
         <div class="horizontal-layout question" style="--tb-width: 200px;">
             <p>Username: </p>
             
@@ -29,7 +29,7 @@
         </div>
         
         <div class="question" style="--tb-width: 200px;">
-            <button onclick="login('usertb','pwtb', 'msgid')">Submit</button>
+            <button onclick="signup('usertb','pwtb', 'msgid')">Sign up</button>
         </div>
 
         <p id="msgid"></p>

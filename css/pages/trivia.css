@@ -12,11 +12,6 @@ button {
     width: var(--btn-width, 200px);
 }
 
-.question {
-    font-size: 18px;
-    margin-top: 20px;
-}
-
 .selected {
     font-weight: bold;
 }
@@ -27,13 +22,6 @@ button {
 
 .incorrect {
     background-color: lightcoral;
-}
-
-.question .tb {
-    font-size: 16px;
-    margin: 10px;
-    padding: 10px 20px;
-    width: var(--tb-width, 200px);
 }
 
 button.correct {
