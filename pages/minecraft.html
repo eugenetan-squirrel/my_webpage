@@ -3,19 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <title>Minecraft Launcher</title>
-
-  <script>
-    async function openUndetectable() {
-      const html = await fetch("https://cdn.jsdelivr.net/gh/PlanetDogeCodes/Eagletcraft-1.12@main/source%20file/egc1-12.xml").then(r => r.text());
-      const w = window.open("", "_blank");
-      if (!w) return alert("Popup blocked");
-      w.document.open();
-      w.document.write(html);
-      w.document.close();
-      w.document.documentElement.requestFullscreen?.();
-    }
-  </script>
-
+  <script src="../js/firebase.js" defer type="module"></script>
+  <script src="../js/minecraft.js" defer type="module"></script>
   <link rel="stylesheet" href="../css/base.css"></link>
 </head>
 
@@ -28,6 +17,14 @@
   <div style="align-items: center; justify-content: center; display: flex; margin-top:10px;">
     <button onclick="openUndetectable()">Launch</button>
   </div>
+
+  <div id="chatBox" style="height:400px;width:auto;"></div>
+
+  <div id="inputContainer">
+    <input type="text" id="messageInput" placeholder="Type a message..." />
+    <button id="sendButton" onclick="send()">Send</button>
+  </div>
+</div>
 </body>
 
 </html>

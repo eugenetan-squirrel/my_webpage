@@ -17,6 +17,8 @@ async function login(usertbid, pwtbid, msgid) {
 
     if (data.password === password) {
         message.textContent = "Successful sign in!";
+        sessionStorage.setItem("loggedIn", "true");
+        sessionStorage.setItem("username", username);
         window.location.href = "/pages/minecraft.html";
         return;
     } else {
@@ -42,6 +44,8 @@ async function adminCheck(pwtbid, msgid) {
     if (data.code === password) {
         message.textContent = "Successful admin sign in!";
         sessionStorage.setItem("isAdmin", "true");
+        sessionStorage.setItem("loggedIn", "true");
+        sessionStorage.setItem("username", "Admin (Eugene)");
         window.location.href = "/pages/admin.html";
         return;
     } else {
