@@ -2,7 +2,9 @@
 @import url('https://fonts.googleapis.com/css2?family=BBH+Bartle&display=swap');
 
 div {
-    border: 5px black double;
+    border: 1px solid black;
+    padding: 10px;
+    margin: 10px;
 }
 
 header, h1 {
@@ -38,7 +40,6 @@ a:hover {
     --left-margin: 5px;
     --right-margin: 5px;
     --padding: 10px;
-    margin: 5px;
     padding: var(--padding);
     gap: 15px;
 }

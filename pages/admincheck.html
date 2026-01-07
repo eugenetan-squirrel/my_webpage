@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Check</title>
+    <link rel="stylesheet" href="../css/base.css">
+    <script src="../js/firebase.js" defer type="module"></script>
+    <script src="../js/accounts.js" defer type="module"></script>
+        
+</head>
+<body>
+    <header>Admin Check</header>
+    <p>Please enter your admin credentials.</p>
+    <div class="horizontal-layout question" style="--tb-width: 200px;">
+        <p>Password: </p>
+        <input class="tb" type="password" id="adminusertb" placeholder="Admin Password">
+    </div>
+    <div>
+        <button onclick="adminCheck('adminusertb', 'adminmsgid')">Submit</button>
+        <p id="adminmsgid"></p>
+    </div>
+</body>
+</html>

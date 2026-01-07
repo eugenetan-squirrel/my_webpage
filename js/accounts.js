@@ -1,6 +1,4 @@
-
-const app = initializeApp(firebaseConfig);
-const db = getFirestore(app);
+import { db, doc, getDoc } from "./firebase.js";
 
 async function login(usertbid, pwtbid, msgid) {
     const username = document.getElementById(usertbid).value.trim();
@@ -19,6 +17,7 @@ async function login(usertbid, pwtbid, msgid) {
 
     if (data.password === password) {
         message.textContent = "Successful sign in!";
+        window.location.href = "/pages/minecraft.html";
         return;
     } else {
         message.textContent = "Invalid password.";
@@ -26,27 +25,31 @@ async function login(usertbid, pwtbid, msgid) {
     }
 }
 
-async function signup(usertbid, pwtbid, msgid) {
-    const username = document.getElementById(usertbid).value.trim();
+async function adminCheck(pwtbid, msgid) {
     const password = document.getElementById(pwtbid).value;
     const message = document.getElementById(msgid);
 
-    const ref = doc(db, "users", username);
+    const ref = doc(db, "admin", "admin");
     const snap = await getDoc(ref)
 
-    if (snap.exists()) {
-        message.textContent = "Username already exists.";
+    if (!snap.exists()) {
+        message.textContent = "Invalid admin username.";
         return;
     }
 
-    if (!username || !password) {
-        message.textContent = "Please fill in all fields.";
+    const data = snap.data()
+
+    if (data.code === password) {
+        message.textContent = "Successful admin sign in!";
+        sessionStorage.setItem("isAdmin", "true");
+        window.location.href = "/pages/admin.html";
+        return;
+    } else {
+        message.textContent = "Invalid admin password.";
         return;
     }
-
-    await setDoc(ref, { password: password })
-    message.textContent = "Signup successful!";
 }
 
+window.adminCheck = adminCheck;
 window.login = login;
 window.signup = signup;

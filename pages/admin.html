@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel</title>
+    <script src="../js/firebase.js" defer type="module"></script>
+    <script src="../js/signup.js" defer type="module"></script>
+    <link rel="stylesheet" href="../css/base.css">
+</head>
+<body>
+    <header>Admin</header>
+    <p>Welcome to the admin panel.</p>
+
+    <p>Here you can create or delete user accounts.</p>
+    <p>Or go <a href="/index.html">back</a> to the main page.</p>
+
+    <div>
+        <h2>Create Account</h2>
+    </div>
+    <div class="horizontal-layout question" style="--tb-width: 200px;">
+        <p>Username: </p>
+        
+        <input class="tb" type="text" id="usertb" placeholder="Username">
+    </div>
+
+    <div class="horizontal-layout question" style="--tb-width: 200px;">
+        <p>Password: </p>
+            
+        <input class="tb" type="password" id="pwtb" placeholder="Password">
+    </div>
+
+    <div class="horizontal-layout question" style="margin-top: 10px;">
+        <button onclick="signup('usertb','pwtb', 'msgid')">Create</button>
+    </div>
+
+    <div>
+        <p id="msgid"></p>
+    </div>
+
+    <div style="margin-top: 20px;">
+        <h2>Delete Account</h2>
+    </div>
+    
+    <div class="horizontal-layout question" style="--tb-width: 200px;">
+        <p>Username: </p>
+            
+        <input class="tb" type="text" id="delusertb" placeholder="Username">
+    </div>
+        
+    <div class="horizontal-layout question" style="margin-top: 10px;">
+        <button onclick="deleteAccount('delusertb', 'delmsgid')">Delete</button>
+    </div>
+
+    <div>
+        <p id="delmsgid"></p>
+    </div>
+</body>
+</html>

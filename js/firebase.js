@@ -1,5 +1,5 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
-import { getFirestore, doc, setDoc, getDoc } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
+import { getFirestore, doc, setDoc, getDoc, deleteDoc } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
 
 const firebaseConfig = {
     apiKey: "AIzaSyAwqnfRXzNVNx0CtoaBTdbn5koPkgcVc_w",
@@ -10,3 +10,7 @@ const firebaseConfig = {
     appId: "1:203044731298:web:71eb27c97f212829ff9afb",
     measurementId: "G-6NBGPHRVEL"
 };
+
+const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
+export { db, doc, setDoc, getDoc, deleteDoc };
