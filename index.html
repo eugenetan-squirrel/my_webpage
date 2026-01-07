@@ -1,83 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Home</title>
+        <title>Log In</title>
 
-        <link rel="stylesheet" href="css/base.css">
-        <link rel="stylesheet" href="css/pages/index.css">
-        <script type="module" src="../js/pages/index.js" defer></script>
-
+        <link rel="stylesheet" href="../css/base.css">
+        <link rel="stylesheet" href="../css/pages/index.css">
+        <script src="../js/accounts.js" type="module" defer></script>
+        
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="author" content="Eugene Tan">
-        <meta name="description" content="This is the hompage for my first webpage!">
-        <meta name="keywords" content="HTML, CSS, JavaScript">
+        <meta name="description" content="Login Page">
+        <meta name="keywords" content="Login, username, password">
     </head>
     <body>
-        <header>
-            Home
-        </header>
-        <div class="horizontal-layout">
-            <p>This is the homepage. Navigate to the <a href="pages/trivia.html">trivia</a> section to test your knowledge!</p>
-            <p style="text-align:right; margin-left:40%;"><a href="pages/login.html">Log In</a></p>
-            <p style="text-align:right; margin-left:5%;"><a href="pages/signup.html">Sign Up</a></p>
+        <header>Log In</header>
+        <p>To use this service, you must log in.</p>
+        <p>Don't have an account? Sign up <a href="pages/signup.html">here</a>.</p>
+
+        <div class="horizontal-layout question" style="--tb-width: 200px;">
+            <p>Username: </p>
+            <input class="tb" type="text" id="usertb" placeholder="Username">
+        </div>
+
+        <div class="horizontal-layout question" style="--tb-width: 200px;">
+            <p>Password: </p>
+            <input class="tb" type="password" id="pwtb" placeholder="Password">
         </div>
         
-        <p>Enjoy your stay!</p>
-        <div style="--btn-width:200px">
-            <h2>Votes: <span id="count">0</span></h2>
-            <button id="up" onclick="vote('up', this)">Upvote! </button>
-            <button id="down" onclick="vote('down', this)">Downvote! </button>
+        <div class="horizontal-layout" style="margin-top: 10px;">
+            <button onclick="login('usertb','pwtb', 'msgid')">Log In</button>
         </div>
-        
-        <p>Here are some recommended <i>webpages</i> you should visit:</p>
 
-        <div class="flashcard-container">
-            <div class="single-flashcard" style=background-color:limegreen>
-                <img class="flashcard-icon" src="../../assets/images/chess-icon.jpg" alt="Chess.com Logo">
-                <div class="flashcard-text">
-                    <b>Chess.com</b>
-                    <p>Play chess online with people around the world!</p>
-                    <a href="https://chess.com">Play now! </a>
-                </div>
-            </div>
-            
-            <div class="single-flashcard" style=background-color:deepskyblue>
-                <img class="flashcard-icon" src="../../assets/images/youtube-icon.jpg" alt="Youtube Logo">
-                <div class="flashcard-text">
-                    <b>Youtube</b>
-                    <p>Browse, create and watch videos for free!</p>
-                    <a href="https://youtu.be/dQw4w9WgXcQ">View most viral video with 1.7 billion views!</a>
-                </div>
-            </div>
-        </div>
-        <div class="horizontal-layout" style=--gap:20px;>
-            <div class="square-box" style=--box-width:250px;>
-                <p>Ad</p>
-                <hr>
-                <p>Congratulations! You just won a Samsung A16 Pro!</p>
-                <p>Click <a href="https://youtu.be/dQw4w9WgXcQ">here</a> to claim your prize!</p>
-                <p>Totally not a scam!</p>
-            </div>
-
-            <div class="square-box" style=--box-width:250px;>
-                <p>Ad</p>
-                <hr>
-                <p>Apple watch promotion!</p>
-                <p>Buy one get five free!</p>
-                <p>Click <a href="https://youtu.be/dQw4w9WgXcQ">here</a> to claim your prize!</p>
-            </div>
-        </div>
-        <div class="flashcard-container">
-            <div class="single-flashcard" style=background-color:yellow>
-                <img class="flashcard-icon" src="../../assets/images/chatgpt-icon.jpg" alt="ChatGPT Logo">
-                <div class="flashcard-text">
-                    <b>ChatGPT</b>
-                    <p>Ask any of your daily questions and expect an interesting and funny answer! </p>
-                    <a href="https://chat.openai.com">Try it out!</a>
-                </div>
-            </div>
-        </div>
+        <p id="msgid"></p>
     </body>
-
 </html>

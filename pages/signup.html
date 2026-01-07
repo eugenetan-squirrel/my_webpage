@@ -5,7 +5,7 @@
 
         <link rel="stylesheet" href="../css/base.css">
         <link rel="stylesheet" href="../css/pages/trivia.css">
-        <script src="../js/login.js" defer type="module"></script>
+        <script src="../js/accounts.js" defer type="module"></script>
         
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,8 +15,7 @@
     </head>
     <body>
         <header>Sign Up</header>
-        <p>Sign up by entering all the fields or <a href="login.html">log in</a> if you already have an account.</p>
-        <p>Or <a href="../index.html">go back</a>.</p>
+        <p>Sign up by entering all the fields or <a href="../index.html">log in</a> if you already have an account.</p>
         <div class="horizontal-layout question" style="--tb-width: 200px;">
             <p>Username: </p>
             
@@ -29,7 +28,7 @@
             <input class="tb" type="password" id="pwtb" placeholder="Password">
         </div>
         
-        <div class="question" style="--tb-width: 200px;">
+        <div class="horizontal-layout question" style="margin-top: 10px;">
             <button onclick="signup('usertb','pwtb', 'msgid')">Sign up</button>
         </div>
 

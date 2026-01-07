@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Minecraft Launcher</title>
+
+  <script>
+    async function openUndetectable() {
+      const html = await fetch("https://cdn.jsdelivr.net/gh/PlanetDogeCodes/Eagletcraft-1.12@main/source%20file/egc1-12.xml").then(r => r.text());
+      const w = window.open("", "_blank");
+      if (!w) return alert("Popup blocked");
+      w.document.open();
+      w.document.write(html);
+      w.document.close();
+      w.document.documentElement.requestFullscreen?.();
+    }
+  </script>
+
+  <style src="stylesheets/base.css"></style>
+  </head>
+
+  <body>
+    <button onclick="openUndetectable()">Launch</button>
+  </body>
+
+</html>
